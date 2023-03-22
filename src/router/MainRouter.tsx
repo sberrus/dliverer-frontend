@@ -3,6 +3,7 @@ import { Route } from "react-router";
 import { Routes, Navigate } from "react-router-dom";
 // templates
 import MainTemplate from "../templates/MainTemplate";
+import AuthTemplate from "../templates/AuthTemplate";
 // pages
 import Index from "../pages/index/Index";
 import Login from "../pages/login/Login";
@@ -14,7 +15,7 @@ const MainRouter = () => {
 		<Routes>
 			<Route path="/" element={<MainTemplate />}>
 				<Route index element={<Index />} />
-				<Route path="auth">
+				<Route path="auth" element={<AuthTemplate />}>
 					<Route path="login" element={<Login />} />
 					<Route path="register" element={<Register />} />
 					<Route path="forgot-password" element={<ForgotPassword />} />

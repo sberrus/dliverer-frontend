@@ -10,6 +10,14 @@
 	}
 	// form Container
 	.formContainer {
+		// have an account
+		.haveAccount {
+			padding-top: 1em;
+			.link {
+				color: $sky;
+			}
+		}
+
 		width: 100%;
 		max-width: 600px;
 		margin: auto;
@@ -23,6 +31,34 @@
 		// inputs container
 		.form {
 			width: 100%;
+			// password container
+			.passwordContainer {
+				display: flex;
+				justify-content: center;
+				.inputContainer {
+					width: 100%;
+					&:first-child {
+						padding-right: 0.5em;
+					}
+					&:last-child {
+						padding-left: 0.5em;
+					}
+				}
+			}
+
+			@media (max-width: 430px) {
+				.passwordContainer {
+					display: block;
+					.inputContainer {
+						&:first-child {
+							padding-right: 0;
+						}
+						&:last-child {
+							padding-left: 0;
+						}
+					}
+				}
+			}
 			.inputField {
 				margin: 0.75em 0;
 				width: 100%;
